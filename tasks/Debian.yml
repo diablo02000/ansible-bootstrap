@@ -1,0 +1,10 @@
+---
+# Tasks to run on Debian/Ubuntu VM.
+
+# Install packages and refresh cache if older than 3600 seconds.
+- name: Install required packages.
+  apt:
+    pkg: "{{ bootstrap_packages }}"
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600

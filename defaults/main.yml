@@ -1,2 +1,5 @@
 ---
 # defaults file for ansible-bootstrap
+
+# Install custom packages.
+bootstrap_custom_packages: []

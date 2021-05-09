@@ -1,2 +1,8 @@
 ---
 # tasks file for ansible-bootstrap
+- name: "Include specific variables related to distribution."
+  include_vars:
+    file: "{{ ansible_distribution }}.yml"
+
+# Run tasks by OS family.
+- include: "{{ ansible_os_family }}.yml"

@@ -1,2 +1,5 @@
 ---
 # vars file for ansible-bootstrap
+
+# List of packages to install.
+bootstrap_packages: "{{ bootstrap_generic_packages + bootstrap_custom_packages }}"
